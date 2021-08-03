@@ -32,9 +32,6 @@ getPlayerChoice();
 function playRound(playerChoice) {
   const computerChoice = getComputerChoice();
   
-  // console.log(playerChoice);
-  // console.log(computerChoice);
-
   if (playerChoice === computerChoice){
     draw();
   }  
@@ -63,6 +60,13 @@ function win(playerChoice, computerChoice) {
   playerScore_span.innerHTML = playerScore;
   computerScore_span.innerHTML = computerScore;
   result_p.innerHTML = playerChoice + " beats " + computerChoice + ". You win!";
+  
+  if (playerScore === 10) {
+    result_p.innerHTML = "Player wins the game.";
+    setTimeout(function() {
+      window.location.reload()
+    }, 2000);
+  }
 }
 
 function lose(playerChoice, computerChoice) {
@@ -70,6 +74,13 @@ function lose(playerChoice, computerChoice) {
   playerScore_span.innerHTML = playerScore;
   computerScore_span.innerHTML = computerScore;
   result_p.innerHTML = computerChoice + " beats " + playerChoice + ". You lose!";
+
+  if (computerScore === 10){
+    result_p.innerHTML = "Computer wins the game.";
+    setTimeout(function() {
+      window.location.reload()
+    }, 2000);
+  }
 }
 
 function draw() {
