@@ -5,14 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" href="#">
 </head>
 <body>
     <H1>Choose One</H1>
-    <button id="btn">Rock</button>
-    <button id="btn">Paper</button>
-    <button id="btn">Scissors</button>
+
+    <div class="choices">
+        <button class="choice" id="r">Rock</button>
+        <button class="choice" id="p">Paper</button>
+        <button class="choice" id="s">Scissors</button>
+    </div>
+
+    <div class="score-board">
+        <div>
+            Player
+            <span id="player-score">0</span>
+        </div>
+        <div>
+            Computer
+            <span id="computer-score">0</span>
+        </div>
+    </div>
+
+    <div class="result">
+        <p>Paper covers rock. You win!</p>
+    </div>
 
 </body>
 </html>

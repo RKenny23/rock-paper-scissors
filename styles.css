@@ -1,0 +1,44 @@
+body {
+  background-color: #ccc;
+}
+
+.choices {
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+}
+
+.choice {
+  font-size: 2rem;
+}
+
+.choice:hover {
+  transform: scale(1.1);
+  transition: .2s;
+}
+
+.score-board {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.result-choice {
+  opacity: .5;
+}
+
+.result-choice.winner {
+  opacity: 1;
+  font-size: 1.5rem;
+}
+
+p {
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+}
